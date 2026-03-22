@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filme — Cinema World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="header">
+    <div id="header-inner">
+        <a href="index.html" id="logo">Cinema<span>World</span></a>
+        <ul id="nav">
+            <li><a href="index.html">Acasă</a></li>
+            <li><a href="filme.html" class="active">Filme</a></li>
+            <li><a href="recenzii.html">Recenzii</a></li>
+            <li><a href="program.html">Program</a></li>
+            <li><a href="formular.html">Formular</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="hero">
+    <div id="wrapper">
+        <div id="hero-image">
+            <img src="image.avif" alt="Filme populare">
+        </div>
+        <h1>Filme <span class="accent">Populare</span></h1>
+    </div>
+</div>
+
+<hr>
+
+<div id="main">
+    <div id="wrapper">
+        <h2>Selecția lunii</h2>
+        <ul id="film-list">
+            <li>Inception</li>
+            <li>Interstellar</li>
+            <li>Avatar</li>
+            <li>Fast &amp; Furious</li>
+            <li>Joker</li>
+        </ul>
+    </div>
+</div>
+
+<div id="footer">
+    <p>© 2025 CinemaWorld <span class="glow-dot"></span> Toate drepturile rezervate</p>
+</div>
+
+<script>
+    // 1. Mesaj de bun venit
+    alert("Bun venit pe Cinema World!");
+
+    // 2. Click pe logo schimba culoarea temporar
+    document.getElementById("logo").addEventListener("click", function(e) {
+        e.preventDefault();
+        this.style.color = "#c0392b";
+        setTimeout(function() { window.location.href = "index.html"; }, 350);
+    });
+
+    // 3. Efect hover pe linkurile din nav
+    var navLinks = document.querySelectorAll("#nav a");
+    navLinks.forEach(function(link) {
+        link.addEventListener("mouseenter", function() {
+            this.style.textDecoration = "underline";
+        });
+        link.addEventListener("mouseleave", function() {
+            this.style.textDecoration = "";
+        });
+    });
+</script>
+</body>
+</html>
